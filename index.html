@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>实时数据</title>
+    <link rel="stylesheet" type="text/css" href="css/page.css">
+    <link rel="stylesheet" type="text/css" href="css/odometer.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+        window.odometerOptions = {
+          format: '(,ddd)',
+          duration: 500,
+        };
+    </script>
+</head>
+<body>
+<section class="page" id="page1">
+    <h2 class="page_title page_fixed_title">全国移动支付交易量实时监控</h2>
+    <div id="mapChart" class="map_chart"></div>
+    <div class="map_legend"></div>
+</section>
+<section class="page" id="page2">
+    <h2 class="page_title">移动支付日交易数据</h2>
+    <div class="pay_data">
+        <ul class="data_list">
+            <li>
+                <h3 class="data_title"><i class="icon data_icon1"></i>今日交易金额</h3>
+                <div class="data_count odometer odometer-auto-theme pink" id="todayMoney"></div>
+            </li>
+            <!-- <li>
+                <h3 class="data_title"><i class="icon data_icon1"></i>昨日交易金额</h3>
+                <div class="data_count odometer odometer-auto-theme blue" id="yestodayMoney"></div>
+            </li> -->
+        </ul>
+        <ul class="data_list">
+            <li>
+                <h3 class="data_title"><i class="icon data_icon2"></i>今日交易笔数</h3>
+                <div class="data_count odometer odometer-auto-theme pink" id="todayNum"></div>
+            </li>
+            <!-- <li>
+                <h3 class="data_title"><i class="icon data_icon2"></i>昨日交易笔数</h3>
+                <div class="data_count odometer odometer-auto-theme blue" id="yestodayNum"></div>
+            </li> -->
+        </ul>      
+    </div>   
+</section>
+<section class="page" id="page3">
+    <h2 class="page_title">收银场景所占百分比(%)</h2>
+    <ul class="pay_percent">
+        <li>
+            <div class="percent_chart">
+                <span class="pointer"></span>
+            </div>
+            <div class="percent_info">
+                <p class="percent_data">32.0%</p>
+                <p class="percent_title">收银台所占比</p>
+            </div>
+            <p class="percent_desc">收银台5.0版本，无缝对接传统收银台，升级账单功能，方便查账对账，支持智慧扫码，多种支付通道一键扫描收款，让收款更加轻松便捷...</p>
+        </li>
+        <li>
+            <div class="percent_chart">
+                <span class="pointer"></span>
+            </div>
+            <div class="percent_info">
+                <p class="percent_data">28.0%</p>
+                <p class="percent_title">POS机所占比</p>
+            </div>
+            <p class="percent_desc">第五代智能POS机，小巧便捷，支持多种支付通道、银联苹果支付等；超长续航时间，超灵敏扫描探头，收款更加快速安全...</p>
+        </li>
+        <li>
+            <div class="percent_chart">
+                <span class="pointer"></span>
+            </div>
+            <div class="percent_info">
+                <p class="percent_data">21.2%</p>
+                <p class="percent_title">APP所占比</p>
+            </div>
+            <p class="percent_desc">移动端收款APP，支持多通道智慧扫码、会员卡、卡券核销账单统计、老板赚钱分析等功能，方便灵活，一部手机轻松搞定收款...</p>
+        </li>
+        <li>
+            <div class="percent_chart">
+                <span class="pointer"></span>
+            </div>
+            <div class="percent_info">
+                <p class="percent_data">18.8%</p>
+                <p class="percent_title">智慧码所占比</p>
+            </div>
+            <p class="percent_desc">最低成本的收款方式，只需打印一张收款二维码，顾客就可以通过扫描二维码完成付款，且支持多种支付通道，以适应不同顾客的支付需求...</p>
+        </li>
+    </ul>      
+</section>
+<section class="page" id="page4">
+    <h2 class="page_title"><i id="year">2015</i>年移动支付交易笔数市场份额</h2>  
+    <div class="pay_market">
+        <div class="market_left">
+            <span class="market_data" id="marketData"><i>93100</i>亿元</span>
+            <div id="marketCharts" class="market_charts"></div>
+        </div>
+        <div class="market_right">
+            <p class="market_title">本月累计防御攻击次数</p>
+            <p class="market_data2  white odometer odometer-auto-theme" id="marketData2">0</p>
+        </div>
+    </div>
+</section>
+<script type="text/javascript" src="js/echarts.js"></script>
+<script type="text/javascript" src="js/china.js"></script>
+<script type="text/javascript" src="js/wp_charts.js"></script>
+<script type="text/javascript" src="js/odometer.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+</body>
+</html>

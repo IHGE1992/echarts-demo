@@ -1,0 +1,89 @@
+@blue:#00b7ee;
+@pink:#f63681;
+
+html,body,span,h1,h2,h3,h4,h5,h6,p,strong,ol,ul,li{margin:0;padding:0;border:0;font-size:100%;font-weight:normal;vertical-align:baseline;background:transparent}
+i{font-style: normal;}
+ul,li{list-style: none;}
+
+body{width: 1920px;height: 1080px;background-color: #17263d;font-family:"Microsoft YaHei";overflow: auto;}
+// body{width: 1920px;height: 1080px;background-color: #17263d;}
+.blue{color:@blue;}
+.pink{color:@pink;}
+.white{color:#fff;}
+.icon{display: inline-block;background: url("../img/sprite.png") no-repeat;background-size:100% auto;vertical-align: middle;margin-right: 20px;margin-top: -3px;}
+
+@font-face{
+	font-family:"DS";
+	src:url("fonts/DS.eot");
+	src:url("fonts/DS.eot?#iefix") format("embedded-opentype"),
+		  url("fonts/DS.ttf") format("truetype");
+	font-weight:normal;
+	font-style:normal
+}
+@font-face{
+	font-family:"LT";
+	src:url("fonts/LT.eot");
+	src:url("fonts/LT.eot?#iefix") format("embedded-opentype"),
+		  url("fonts/LT.ttf") format("truetype");
+	font-weight:normal;
+	font-style:normal
+}
+.page{width: 50%;height: 50%;padding-top: 36px;box-sizing: border-box;float: left;position: relative;}
+.page_title{
+	position: relative;padding-left: 23px;margin-left:40px;font-size: 24px;color:#fff;line-height: 28px;letter-spacing:3px;word-spacing: 3px;
+	&:before{content: "";position: absolute;left: 0;top: 0;width: 4px;height: 28px;background-color: @blue;}
+}
+.page_fixed_title{position: absolute;z-index: 1000;}
+/* 交易量实时监控 */
+.map_chart{width: 100%;height: 100%;position: relative;}
+.map_legend{position: absolute;width: 54px;height: 75px;background: url("../img/pay_hot_bg.png") no-repeat;background-size:100% auto;left: 110px;bottom: 70px;}
+/* 交易数据 */
+.pay_data{
+	margin:62px 110px 0;padding: 6px 0;position: relative;
+	&:after{content: "";display: block;height: 0;visibility: hidden;clear: both;}
+}
+.data_list{
+	position: relative;float: left;
+	&:first-child{
+		min-width: 370px;padding-right: 10px;box-sizing: border-box;
+		&:after{content: "";position: absolute;top: -6px;right: 0;display: block;width: 2px;height: 330px;background: url("../img/pay_data_bg1.png") no-repeat center center;background-size: 100% auto;}
+	}
+	&:last-child li{padding-left: 110px;}
+	li{height: 159px;box-sizing: border-box;padding-top: 60px;}
+}
+.data_title{color:@blue;font-size: 18px;padding: 32px 0 20px;line-height: 18px;letter-spacing:2px;word-spacing: 2px;}
+.data_count{font-size: 57px;line-height: 50px;}
+.data_icon1{width: 18px;height: 18px;background-position: 0 0;}
+.data_icon2{width: 18px;height: 18px;background-position: 0 -18px;}
+/* 所占百分比 */
+.pay_percent{
+	margin:75px 80px 0;
+	&:after{content: "";display: block;clear: both;height: 0;visibility: hidden;}
+	li{float: left;width: 180px;}
+	li+li{margin-left: 26px;}
+}
+.percent_chart{
+	width: 180px;height: 180px;background: url("../img/pay_percent_bg.png") no-repeat left top;background-size:100% auto;position: relative;cursor: pointer;
+	.pointer{position: absolute;width: 14px;height: 54px;background: url("../img/pointer.png") no-repeat;background-size:14px auto;bottom: 80px;left: 50%;margin-left: -7px;-webkit-transform-origin: 7px 45px;transform-origin: 7px 45px;-webkit-transform: rotate(-126deg);transform: rotate(-126deg);-wekbit-transition:transform .5s;transition:all .5s;}
+}
+.percent_info{text-align: center;line-height: 1;margin-top: -40px;position: relative;z-index: 10;}
+.percent_data{font-size: 28px;font-family: "DS";color:@pink;}
+.percent_title{font-size: 18px;color:@blue;letter-spacing: 2px;word-spacing: 2px;margin-top: 9px;}
+.percent_desc{padding:0 22px;font-size: 10px;line-height: 16px;color:rgba(255,255,255,.3);margin-top: 18px;}
+/* 市场份额 */
+.pay_market{
+	margin: 65px 0 0 80px;background: url("../img/pay_market.png") no-repeat 437px center;
+	&:after{content: "";display: block;clear: both;visibility: hidden;height: 0;}
+}
+.market_left{width: 437px;padding: 35px 0;position: relative;float: left;}
+.market_charts{width: 100%;height: 240px;}
+.market_data{
+	position: absolute;width: 124px;height: 124px;line-height: 124px;text-align: center;left: 58px;top: 93px;color:#32b950;z-index: 100;font-size: 10px;font-family: "黑体";
+	i{font-size: 28px;font-family: "DS";}
+}
+.market_right{box-sizing:border-box;padding:115px 0 0 160px;min-width: 362px;height: 310px;float: left;background: url("../img/pay_market_bg2.png") center left no-repeat;background-size: 100% auto;}
+.market_title{font-size: 18px;color:#32b950;letter-spacing: 2px;word-spacing: 2px;}
+.market_data2{font-size: 57px;}
+
+
+
